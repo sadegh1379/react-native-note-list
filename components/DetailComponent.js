@@ -8,6 +8,7 @@ const DetailComponent = (props)=>{
     const {colors} = useTheme();
     return(
         <View style={styles.container}>
+           
             <View style={styles.head}>
                 <Title style={{color : colors.text}}>{note.title}</Title>
             </View>
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
         alignSelf:'center',
         marginTop : 50,
 
-    }   
+    }
 
 })
 export default DetailComponent;

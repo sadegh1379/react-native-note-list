@@ -32,7 +32,6 @@ const MyTabNavigation = (props) => {
         activeTintColor: "#e91e63",
         inactiveTintColor: "gray",
       }}
-      initialRouteName="Setting"
     >
       <Tab.Screen
         name="Home"

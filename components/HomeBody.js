@@ -1,4 +1,4 @@
-import React ,{useState} from "react";
+import React ,{useState , useEffect} from "react";
 import { Text, View, StyleSheet, ScrollView, Pressable } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
@@ -6,7 +6,7 @@ import { Caption , Title } from "react-native-paper";
 import { useSelector } from "react-redux";
 import * as Animatable from 'react-native-animatable';
 import {useDispatch} from 'react-redux';
-import {delete_note} from '../redux/actions/Action';
+import {delete_note } from '../redux/actions/Action';
 import {useTheme}  from '@react-navigation/native';
 
 

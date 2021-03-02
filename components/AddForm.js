@@ -3,7 +3,7 @@ import {Pressable, Text , TextInput , View , StyleSheet} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {add_note} from '../redux/actions/Action';
 import * as Animatable from 'react-native-animatable';
-import { Caption } from 'react-native-paper';
+import { AntDesign } from '@expo/vector-icons';
 
 
 const AddForm  = (props)=>{
@@ -38,6 +38,9 @@ const AddForm  = (props)=>{
     }
     return(
         <Animatable.View animation="fadeInUpBig" style={styles.container}>
+            <View style={styles.circle}>
+                 <AntDesign name="addfile" size={30} color="#fff" />
+            </View>
             <View style={{width:'100%'}}>
                 <TextInput maxLength={22} value={title}  onChangeText={(text)=>handleTitleChange(text)} style={styles.myInput}  keyboardType="default" placeholder="Title..."/>
                 {
@@ -68,9 +71,10 @@ const styles = StyleSheet.create({
     container:{
         flex:1,
         width  : '90%',
-        justifyContent : 'center',
+        justifyContent : 'flex-start',
         alignItems:'center',
-        alignSelf:'center'
+        alignSelf:'center',
+        marginTop : 100
     },
     myInput:{
         borderWidth : 1,
@@ -87,7 +91,17 @@ const styles = StyleSheet.create({
         elevation : 10,
         borderRadius: 10,
 
-    }
+    },
+    circle:{
+        backgroundColor :'#e91e63',
+        padding : 20,
+        width : 100,
+        height : 100,
+        borderRadius : 100,
+        marginBottom : 20,
+        justifyContent : 'center',
+        alignItems:'center',
+    } 
 })
 
 export default AddForm;

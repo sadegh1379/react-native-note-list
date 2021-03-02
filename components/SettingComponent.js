@@ -3,6 +3,8 @@ import { Text , View , StyleSheet } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import {useTheme} from '@react-navigation/native';
 import { Switch } from 'react-native-paper';
+import * as Animatable from 'react-native-animatable';
+
 
 const SettingComponent = (props)=>{
     const {colors} = useTheme();
@@ -13,7 +15,7 @@ const SettingComponent = (props)=>{
         props.themeToggle();
     }
     return(
-        <View style={styles.container}>
+        <Animatable.View animation="fadeInUpBig" style={styles.container}>
             <View style={styles.item}>
                 <View>
                  <Switch style={{height : 25}} value={dark} color="#e91e63" onValueChange={onToggleSwitch} />
@@ -23,26 +25,9 @@ const SettingComponent = (props)=>{
                      <MaterialCommunityIcons name="theme-light-dark" size={24} color={colors.text} />
                 </View>
             </View>
-            <View style={styles.item}>
-                <View>
-                 <Switch style={{height : 25}} value={dark} color="#e91e63" onValueChange={onToggleSwitch} />
-                </View>
-                <View style={{flexDirection:'row'}}>
-                     <Text style={[styles.text ,{color : colors.text}]}>Dark Mode</Text>
-                     <MaterialCommunityIcons name="theme-light-dark" size={24} color={colors.text} />
-                </View>
-            </View>
-            <View style={styles.item}>
-                <View>
-                 <Switch style={{height : 25}} value={dark} color="#e91e63" onValueChange={onToggleSwitch} />
-                </View>
-                <View style={{flexDirection:'row'}}>
-                     <Text style={[styles.text ,{color : colors.text}]}>Dark Mode</Text>
-                     <MaterialCommunityIcons name="theme-light-dark" size={24} color={colors.text} />
-                </View>
-            </View>
+           
             
-        </View>
+        </Animatable.View>
     )
 }
 

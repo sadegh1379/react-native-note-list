@@ -3,6 +3,7 @@ import {Text , View , StyleSheet} from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import {useTheme} from '@react-navigation/native';
+import { SimpleLineIcons } from '@expo/vector-icons';
 
 
 const HomeHeader = (props)=>{
@@ -10,7 +11,11 @@ const HomeHeader = (props)=>{
     return(
         <View style={styles.container}>
             <View>
-              <Ionicons name="menu" size={24} color={colors.text} />
+                {props.title == 'NOTE'|| props.title == 'EDIT NOTE'  ? (
+                     <Ionicons onPress={()=>props.navigation.goBack()} name="arrow-back" size={24} color={colors.text} />
+                ) : (
+                    <SimpleLineIcons onPress={()=>props.navigation.navigate('AddTodo')} name="note" size={24} color={colors.text} />
+                )}
             </View>
             <View>
                 <Text style={{fontWeight : 'bold' , fontSize : 18 , color:colors.text}}>{props.title}</Text>

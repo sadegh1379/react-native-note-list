@@ -1,14 +1,16 @@
 import React,{useState} from 'react';
 import {Pressable, Text , TextInput , View , StyleSheet} from 'react-native';
 import {useDispatch} from 'react-redux';
-import {add_note} from '../redux/actions/Action';
+import {edit_note} from '../redux/actions/Action';
 import * as Animatable from 'react-native-animatable';
 import { Caption } from 'react-native-paper';
 
 
-const AddForm  = (props)=>{
-    const [title , setTitle] = useState('');
-    const [body , setBody] = useState('');
+const EditForm  = (props)=>{
+    const note = props.route.params.item;
+
+    const [title , setTitle] = useState(note.title);
+    const [body , setBody] = useState(note.body);
     const [titleErr , setTitleErr] = useState('');
     const [bodyErr , setBodyErr] = useState('');
     const Dispatch = useDispatch();
@@ -27,12 +29,12 @@ const AddForm  = (props)=>{
             setBodyErr('please enter body');
         }else{
             const newNote = {
+                id : note.id,
                 title : title,
                 body : body
+                
             }
-            Dispatch(add_note(newNote));
-            setTitle('');
-            setBody('');
+            Dispatch(edit_note(newNote));
             props.navigation.navigate('Home')
         }
     }
@@ -56,7 +58,7 @@ const AddForm  = (props)=>{
                     onPress={handle_add_note}
                 >
                     <View>
-                        <Text style={{fontWeight : 'bold'}}>ADD</Text>
+                        <Text style={{fontWeight : 'bold'}}>EDIT</Text>
                     </View>
                 </Pressable>
             </View>
@@ -83,11 +85,11 @@ const styles = StyleSheet.create({
     addButton : {
         alignItems:'center',
         padding :10,
-        backgroundColor :'#e91e63',
+        backgroundColor :'#ffca28',
         elevation : 10,
         borderRadius: 10,
 
     }
 })
 
-export default AddForm;
+export default EditForm;

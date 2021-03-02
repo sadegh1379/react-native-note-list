@@ -7,8 +7,8 @@ import HomeHeader from '../components/HomeHeader';
 const AddTodoScreen = (props)=>{
     return(
         <View style={{flex:1 }}>
-            <HomeHeader title="ADD NOTE"/>
-            <AddForm/>
+            <HomeHeader {...props} title="ADD NOTE"/>
+            <AddForm {...props}/>
         </View>
     )
 }

@@ -21,6 +21,7 @@ const HomeBody = (props) => {
     setChange(!change);
     
   }
+  
 
   return (
     <Animatable.View animation="fadeInUpBig" style={styles.container}>
@@ -30,7 +31,7 @@ const HomeBody = (props) => {
             <Pressable onPress={() => props.navigation.navigate('Detail' , {item : note})}>
               <View style={{ overflow: "hidden" }}>
                 <Text style={{ fontWeight: "bold" }}>{note.title}</Text>
-                <Caption>{note.body.slice(0 , 10)}...</Caption>
+                <Caption >{note.body.slice(0 , 10)}...</Caption>
               </View>
             </Pressable>
             <View
@@ -73,7 +74,6 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 10,
     marginTop: 10,
-    elevation: 10,
     width: "100%",
   },
   press: {

@@ -18,7 +18,7 @@ const SettingComponent = (props)=>{
         <Animatable.View animation="fadeInUpBig" style={styles.container}>
             <View style={styles.item}>
                 <View>
-                 <Switch style={{height : 25}} value={dark} color="#e91e63" onValueChange={onToggleSwitch} />
+                 <Switch style={{height : 25}} value={props.theme} color="#e91e63" onValueChange={onToggleSwitch} />
                 </View>
                 <View style={{flexDirection:'row'}}>
                      <Text style={[styles.text ,{color : colors.text}]}>Dark Mode</Text>
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         borderColor : '#ad1457',
         borderRadius : 10,
         margin : 5,
-        elevation : 10
+        
 
     }
 })

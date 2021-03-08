@@ -14,7 +14,7 @@ const HomeScreen = (props)=>{
         Dispatch(get_store());
     }, [])
     return(
-        <View style={StyleSheet.container}>
+        <View style={styles.container}>
             <HomeHeader title="NOTE LIST" {...props}/>
             <HomeBody {...props}/>
         </View>
@@ -23,7 +23,7 @@ const HomeScreen = (props)=>{
 
 const styles = StyleSheet.create({
     container :{
-        flex : 1
+        flex :1,
     }
 })
 

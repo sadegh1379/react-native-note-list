@@ -46,16 +46,16 @@ const EditForm  = (props)=>{
             </View>
             <View style={{width:'100%'}}>
                 <TextInput maxLength={22} value={title}  onChangeText={(text)=>handleTitleChange(text)} style={styles.myInput}  keyboardType="default" placeholder="Title..."/>
-                {
+                {/* {
                     titleErr && ( <View><Text style={{fontSize:12 , color:'red' , opacity:0.6}}>{titleErr}</Text></View>)
-                }
+                } */}
                
             </View>
             <View style={{width:'100%' , marginTop : 20}}>
-                <TextInput  value={body} onChangeText={(text)=>handleBodyChange(text)} style={styles.myInput} multiline numberOfLines="5"  placeholder="Note..."/>
-                {
+                <TextInput  value={body} onChangeText={(text)=>handleBodyChange(text)} style={styles.myInput} multiline   placeholder="Note..."/>
+                {/* {
                     bodyErr && (  <View><Text style={{fontSize:12 , color:'red' , opacity:0.6}}>{bodyErr}</Text></View>)
-                }
+                } */}
             </View>
             <View style={{width:'100%' , marginTop : 22}}>
                 <Pressable style={styles.addButton}
@@ -85,7 +85,9 @@ const styles = StyleSheet.create({
         width:'100%',
         padding:10,
         borderRadius : 10,
-        backgroundColor : '#fce4ec'
+        backgroundColor : '#fce4ec',
+        fontFamily:'iran-sans',
+        fontWeight:'bold'
     },
     addButton : {
         alignItems:'center',

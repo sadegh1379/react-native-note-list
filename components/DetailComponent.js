@@ -10,10 +10,10 @@ const DetailComponent = (props)=>{
         <View style={styles.container}>
            
             <View style={styles.head}>
-                <Title style={{color : colors.text}}>{note.title}</Title>
+                <Title style={{color : colors.text , fontFamily:'iran-sans'}}>{note.title}</Title>
             </View>
             <View style={styles.body}>
-                <Text style={{color : colors.text}}>{note.body}</Text>
+                <Text style={{color : colors.text, fontFamily:'iran-sans'}}>{note.body}</Text>
             </View>
         </View>
     )

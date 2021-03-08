@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { StatusBar } from "react-native";
+import React, { useState , useEffect } from "react";
+import { StatusBar , ActivityIndicator , View  } from "react-native";
 import {
   NavigationContainer,
   DarkTheme as NavigationDarkTheme,
@@ -20,12 +20,14 @@ import { Provider } from "react-redux";
 import DetailScreen from "./screens/DetailScreen";
 import EditScreen from "./screens/EditScreen";
 import SettingScreen from "./screens/SettingScreen";
+import {useFonts} from 'expo-font';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 const MyTabNavigation = (props) => {
-  const {themeToggle} = props;
+  const {themeToggle , theme} = props;
   return (
     <Tab.Navigator
       tabBarOptions={{
@@ -55,6 +57,7 @@ const MyTabNavigation = (props) => {
         }}
       />
       <Tab.Screen
+
         name="Setting"
         options={{
           title: "Setting",
@@ -63,17 +66,23 @@ const MyTabNavigation = (props) => {
           ),
         }}
       >
-        {props=><SettingScreen themeToggle={themeToggle} {...props} />}
+        {props=><SettingScreen themeToggle={themeToggle} theme={theme} {...props} />}
       </Tab.Screen>
     </Tab.Navigator>
   );
 };
 
+
 export default function App() {
   const [isDark, setIsDark] = useState(false);
+  let [fontsLoaded] = useFonts({
+    'iran-sans': require('./assets/fonts/IRANSansMobile.ttf'),
+    'b-yekan' : require('./assets/fonts/BYekan.ttf')
+  });
 
-  const themeToggle = ()=>{
+  const themeToggle =async ()=>{
     setIsDark(!isDark);
+   
   }
 
   const darkTheme = {
@@ -90,8 +99,15 @@ export default function App() {
   };
 
   const theme = isDark ? darkTheme : defaultTheme;
-  return (
-    <NavigationContainer theme={theme}>
+  if (!fontsLoaded) {
+    return(
+      <View style={{flex :1 , justifyContent:'center' , alignItems:'center'}}>
+        <ActivityIndicator size="large" color="#00ff00" />
+      </View>
+    ) 
+  }else{
+    return (
+      <NavigationContainer theme={theme}>
       <Provider store={Store}>
         <StatusBar barStyle="dark-content" backgroundColor="#fff" />
         <Stack.Navigator 
@@ -101,7 +117,7 @@ export default function App() {
         >
           <Stack.Screen name="Home">
             {
-              props=><MyTabNavigation themeToggle={themeToggle}  {...props}/>
+              props=><MyTabNavigation theme={isDark} themeToggle={themeToggle}  {...props}/>
             }
           </Stack.Screen>
           <Stack.Screen name="Detail" component={DetailScreen}/>
@@ -110,5 +126,6 @@ export default function App() {
         </Stack.Navigator>
       </Provider>
     </NavigationContainer>
-  );
-}
+    );
+    }
+  }

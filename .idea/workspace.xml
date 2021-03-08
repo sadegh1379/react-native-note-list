@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dc8d7553-6b4e-405e-b60e-5f95d2974696" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AddForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AddForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DetailComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DetailComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/EditForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/EditForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HomeBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/HomeBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SettingComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/SettingComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/reducers/Reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/Reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1pKlidWqoAx8og83nsNxycswgDu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
+    <property name="settings.editor.selected.configurable" value="IntelliLang.Advanced" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc8d7553-6b4e-405e-b60e-5f95d2974696" name="Default Changelist" comment="" />
+      <created>1614939790241</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614939790241</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="92" y="92" width="1182" height="544" key="AVDManager" timestamp="1614941732205">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="AVDManager/0.0.1366.728@0.0.1366.728" timestamp="1614941732205" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1614941729386">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1614941729386" />
+    <state x="184" y="8" key="SettingsEditor" timestamp="1614941560206">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1614941560206" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1614940011122">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1614940011122" />
+  </component>
+</project>
